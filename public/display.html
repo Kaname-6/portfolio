@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MediaNote/Display</title>
+    <link rel="stylesheet" href="css/styleMain.css">
+    <link rel="stylesheet" href="css/styleDisplay.css">
+    <script defer src="js/scriptMain.js"></script>
+    <script defer src="js/scriptDisplay.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="headerText" onclick="location.href='home.html'">MediaNote</h1>
+        <button class="helpButton" onclick="location.href='help.html'">？</button>
+
+        <div class="header-group">
+            <input type="radio" id="type-novel" name="type" value="novel" checked>
+            <label for="type-novel">小説</label>
+
+            <input type="radio" id="type-comic" name="type" value="comic">
+            <label for="type-comic">漫画</label>
+
+            <input type="radio" id="type-movie" name="type" value="movie">
+            <label for="type-movie">映画</label>
+
+            <input type="radio" id="type-anime" name="type" value="anime">
+            <label for="type-anime">アニメ</label>
+
+            <input type="radio" id="type-drama" name="type" value="drama">
+            <label for="type-drama">ドラマ</label>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="subTitle">一覧表示</h2>
+        <section>
+            並び替え：
+            <select id="sortSelect" name="sortKey">
+                <option value="rating">評価</option>
+                <option value="title">作品名</option>
+                <option value="watch_year">閲覧年</option>
+                <option value="release_year">公開年</option>
+            </select>
+            <label><input type="radio" name="sortDirection" value="desc" checked>降順</label>
+            <label><input type="radio" name="sortDirection" value="asc">昇順</label>
+            <label id="filterlabel">
+                <button id="filterNav">絞り込み▽</button>
+            </label>
+            <label id="searchlabel">
+                <input type="text" name="search" placeholder="作品名・作者名など">
+                <button onclick="search()">検索</button>
+            </label>
+        </section>
+        <nav id="displayNav">
+            <section>
+                <div class="flex-row">
+                    <label id="series_searchlabel">
+                        <input type="text" name="series_search" placeholder="シリーズ名">
+                        <button onclick="search()">検索</button>
+                    </label>
+                    <!-- 感想の有無 -->
+                    <fieldset class="search-group">
+                        <legend>感想</legend>
+                        <label><input type="radio" name="hasReview" value="yes">感想あり</label>
+                        <label><input type="radio" name="hasReview" value="no">感想なし</label>
+                    </fieldset>
+                    <!-- もういちど -->
+                    <fieldset class="search-group">
+                        <legend>tobe</legend>
+                        <label><input type="checkbox" name="hasUrl" value="yes">もう一度見たい</label>
+                    </fieldset>
+                </div>
+                <div class="flex-row">
+                    <label>
+                        <input type="checkbox" id="bestInSeries" name="bestInSeries">
+                        シリーズ最高評価のみ
+                    </label>
+                    <!-- ステータス -->
+                    <fieldset class="search-group">
+                        <legend>ステータス</legend>
+                        <label><input type="checkbox" name="status" value="途中">途中</label>
+                        <label><input type="checkbox" name="status" value="断念">断念</label>
+                        <label><input type="checkbox" name="status" value="続き待機">続編待機</label>
+                        <label><input type="checkbox" name="status" value="完走">完走</label>
+                        <label><input type="checkbox" name="status" value="複数閲覧">２回目以上</label>
+                        <label><input type="checkbox" name="status" value="未見">未見</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <!-- タグ（ジャンル） -->
+                    <fieldset id="tagFieldset" class="search-group">
+                        <legend>タグ（複数選択可）</legend>
+                        <!-- チェックボックスがここに生成される -->
+                    </fieldset>
+                </div>
+            </section>
+
+            <button id="clear" onclick="navClear()">絞り込みをクリア</button>
+        </nav>
+
+
+        <table id="mediaTable">
+            <thead>
+                <tr>
+                    <th>タイトル</th>
+                    <th>評価</th>
+                    <th>閲覧年</th>
+                    <th>ステータス</th>
+                    <th>詳細・編集</th>
+                </tr>
+            </thead>
+            <tbody id="data_list">
+                <!-- JavaScriptでデータを追加 -->
+            </tbody>
+        </table>
+        <div id="detailModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span id="modalClose" class="close">&times;</span>
+                <div id="detailContent"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><a href="home.html">ホームに戻る</a></p>
+    </footer>
+</body>
+
+</html>

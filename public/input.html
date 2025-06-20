@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MediaNote/input</title>
+    <link rel="stylesheet" href="css/styleMain.css">
+    <link rel="stylesheet" href="css/styleInput.css">
+    <script defer src="js/scriptMain.js"></script>
+    <script defer src="js/scriptInput.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="headerText" onclick="location.href='home.html'">MediaNote</h1>
+        <button class="helpButton" onclick="location.href='help.html'">？</button>
+
+        <div class="header-group">
+            <input type="radio" id="type-novel" name="type" value="novel" checked>
+            <label for="type-novel">小説</label>
+
+            <input type="radio" id="type-comic" name="type" value="comic">
+            <label for="type-comic">漫画</label>
+
+            <input type="radio" id="type-movie" name="type" value="movie">
+            <label for="type-movie">映画</label>
+
+            <input type="radio" id="type-anime" name="type" value="anime">
+            <label for="type-anime">アニメ</label>
+
+            <input type="radio" id="type-drama" name="type" value="drama">
+            <label for="type-drama">ドラマ</label>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="subTitle">新規入力画面</h2>
+        <form id="mediaForm" method="POST">
+            <section class="data">
+                <label for="title">タイトル：</label>
+                <input type="text" name="title" id="title" placeholder="入力必須" required>
+            </section>
+            <section>
+                <div>
+                    ステータス：
+                    <label><input type="radio" name="status" value="途中">途中</label>
+                    <label><input type="radio" name="status" value="断念">断念</label>
+                    <label><input type="radio" name="status" value="続編待機">続編待機</label>
+                    <label><input type="radio" name="status" value="完走">完走</label>
+                    <label><input type="radio" name="status" value="２回以上">２回以上</label>
+                    <label><input type="radio" name="status" value="未見">未見</label>
+                </div>
+            </section>
+            <section>
+                <label for="rating">評価:</label>
+                <input type="range" id="rating" name="rating" min="0" max="100" value="50" list="rating-ticks">
+                <span id="ratingValue">50</span>
+                <datalist id="rating-ticks">
+                    <option value="25"></option>
+                    <option value="50"></option>
+                    <option value="75"></option>
+                </datalist>
+            </section>
+            <section>
+                <label id="watchYearlabel">閲覧年：</label>
+                <input type="number" id="nowYear" name="watch_year" min="1000" max="2500">
+            </section>
+
+            <hr>
+            <div class="flex-row">
+                <label for="author" id="authorlabel">著者：</label>
+                <input type="text" name="author" id="author">
+                <label for="company" id="companylabel">出版社：</label>
+                <input type="text" name="company" id="company">
+                <label for="release_year" id="releaseYearlabel">出版年：</label>
+                <input type="number" name="release_year" id="release_year" min="1000" max="2500">
+            </div>
+
+            <div class="flex-row">
+                <section>
+                    <label>感想</label><label> / もう一度見たい：<input type="checkbox" name="tobe"></label><br>
+                    <textarea name="impression"></textarea><br>
+                </section>
+                <section>
+                    <div class="flex-row">
+                        <label for="series_title">シリーズ名：</label>
+                        <input type="text" id="series_title" name="series_title">
+                    </div>
+                    <label>推しの名前 / </label><button type="button" id="addFavoriteInputBtn">＋入力欄を追加</button>
+                    <div id="favoriteInputsContainer">
+                        <!-- JSで生成 -->
+                    </div>
+                </section>
+            </div>
+            <section>
+                <fieldset id="tagFieldset">
+                    <legend>タグ（設定で追加）</legend>
+                    <!-- JSで生成 -->
+                </fieldset>
+            </section>
+
+            <button id="saveBtn" type="submit">保存</button>
+        </form>
+    </main>
+    <footer>
+        <p><a href="home.html">ホームに戻る</a></p>
+    </footer>
+</body>
+
+</html>

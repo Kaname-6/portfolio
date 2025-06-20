@@ -1,0 +1,93 @@
+[
+  {
+    "id": "793f691a-8fd6-461e-871d-f020695167d6",
+    "title": "人間失格",
+    "series_title": "",
+    "author": "太宰治",
+    "company": "",
+    "release_year": "1948",
+    "watch_year": "2020",
+    "rating": "77",
+    "status": "完走",
+    "favorite": [],
+    "impression": "主人公がろくでもなかった。",
+    "tobe": false,
+    "tags": [
+      "俗っぽい"
+    ],
+    "user_id": "guest"
+  },
+  {
+    "id": "f4269323-ae0b-404b-8048-9f5335fc7624",
+    "title": "こころ",
+    "series_title": "",
+    "author": "夏目漱石",
+    "company": "朝日新聞",
+    "release_year": "1914",
+    "watch_year": "2025",
+    "rating": "62",
+    "status": "完走",
+    "favorite": [],
+    "impression": "",
+    "tobe": false,
+    "tags": [
+      "かなしい"
+    ],
+    "user_id": "guest"
+  },
+  {
+    "id": "7cf507fd-9a73-4f4e-b03d-4c2a3708a3e6",
+    "title": "斜陽",
+    "series_title": "",
+    "author": "太宰治",
+    "company": "",
+    "release_year": "1947",
+    "watch_year": "2021",
+    "rating": "45",
+    "status": "途中",
+    "favorite": [],
+    "impression": "人間らしい感じ",
+    "tobe": false,
+    "tags": [
+      "俗っぽい"
+    ],
+    "user_id": "guest"
+  },
+  {
+    "id": "bd9fedf6-9c1c-4fb8-aa0f-1e2105216994",
+    "title": "失はれる物語",
+    "series_title": "",
+    "author": "乙一",
+    "company": "",
+    "release_year": "",
+    "watch_year": "2022",
+    "rating": "95",
+    "status": "完走",
+    "favorite": [],
+    "impression": "suki",
+    "tobe": true,
+    "tags": [
+      "綺麗",
+      "かなしい"
+    ],
+    "user_id": "guest"
+  },
+  {
+    "id": "ca143918-7f27-4c52-8d76-1fbcecd3f48f",
+    "title": "夏と花火と私の死体",
+    "series_title": "",
+    "author": "乙一",
+    "company": "",
+    "release_year": "",
+    "watch_year": "2021",
+    "rating": "89",
+    "status": "２回以上",
+    "favorite": [],
+    "impression": "視点が面白い。",
+    "tobe": true,
+    "tags": [
+      "夏っぽい"
+    ],
+    "user_id": "guest"
+  }
+]

@@ -1,0 +1,68 @@
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* 2列に */
+  gap: 20px 40px;
+  /* 行・列の間隔 */
+  margin-bottom: 20px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch; /* 高さ揃える */
+}
+
+.flex-row > section {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* 仕切り線を親の高さに合わせて伸ばす */
+.flex-row > section:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0; /* ← height 100% の代わりに上下0指定 */
+  width: 2px;
+  background-color: #ccc;
+}
+
+#saveBtn {
+  display: block;
+  /* ブロック要素にして */
+  margin: 20px auto 0;
+  /* 左右のマージンを自動に */
+  top: 10px;
+  padding: 10px 20px;
+  /* お好みでサイズ調整 */
+  font-size: 1rem;
+}
+
+#title {
+  width: 80%;
+  height: 30px;
+}
+
+textarea[name="impression"] {
+  width: 90%;
+  margin-top: 10px;
+  height: 50px; /* お好みの高さに調整 */
+  resize: vertical; /* ユーザーが高さ変更できるように（任意） */
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* 各セクションの間に余白 */
+form section,
+form .flex-row,
+form hr{
+  margin-bottom: 16px;
+}
+
+#rating {
+  width: 85%;
+}

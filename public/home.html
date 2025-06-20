@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MediaNote</title>
+    <link rel="stylesheet" href="css/styleMain.css">
+    <link rel="stylesheet" href="css/styleHome.css">
+    <script defer src="js/scriptMain.js"></script>
+    <script defer src="js/scriptHome.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="headerText" onclick="location.href='home.html'">MediaNote</h1>
+        <button class="helpButton" onclick="location.href='help.html'">？</button>
+        
+        <div class="header-group">
+            <input type="radio" id="type-novel" name="type" value="novel" checked>
+            <label for="type-novel">小説</label>
+
+            <input type="radio" id="type-comic" name="type" value="comic">
+            <label for="type-comic">漫画</label>
+
+            <input type="radio" id="type-movie" name="type" value="movie">
+            <label for="type-movie">映画</label>
+
+            <input type="radio" id="type-anime" name="type" value="anime">
+            <label for="type-anime">アニメ</label>
+
+            <input type="radio" id="type-drama" name="type" value="drama">
+            <label for="type-drama">ドラマ</label>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="subTitle">メニュー画面</h2><br>
+        <div class="buttons">
+            <button id="input-button">記録を入力する</button>
+            <button id="display-button">記録したものを閲覧・編集</button>
+            <button id="setting-button">設定</button>
+        </div>
+    </main>
+</body>
+
+</html>

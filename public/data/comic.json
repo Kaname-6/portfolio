@@ -1,0 +1,55 @@
+[
+  {
+    "id": "3488b249-e2bb-49fe-8876-5ab9bcdd6edf",
+    "title": "鬼滅の刃",
+    "series_title": "鬼滅",
+    "author": "吾峠呼世晴",
+    "company": "集英社",
+    "release_year": "",
+    "watch_year": "2020",
+    "rating": "80",
+    "status": "完走",
+    "favorite": [
+      "竈門炭治郎",
+      "我妻善逸"
+    ],
+    "impression": "",
+    "tobe": false,
+    "tags": [],
+    "user_id": "guest"
+  },
+  {
+    "id": "304716cb-e1dc-4491-a7a8-dc872ac6e696",
+    "title": "鬼滅学園",
+    "series_title": "鬼滅",
+    "author": "",
+    "company": "",
+    "release_year": "",
+    "watch_year": "",
+    "rating": "0",
+    "status": "未見",
+    "favorite": [],
+    "impression": "いつかよみたい",
+    "tobe": false,
+    "tags": [],
+    "user_id": "guest"
+  },
+  {
+    "id": "b6d85600-0ead-46df-a934-7d9b4b22e3b9",
+    "title": "暗号学園のいろは",
+    "series_title": "",
+    "author": "",
+    "company": "集英社",
+    "release_year": "",
+    "watch_year": "2023",
+    "rating": "80",
+    "status": "完走",
+    "favorite": [],
+    "impression": "暗号があまりにも難しい。",
+    "tobe": false,
+    "tags": [
+      "綺麗"
+    ],
+    "user_id": "guest"
+  }
+]

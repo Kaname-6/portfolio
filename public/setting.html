@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MediaNote/Setting</title>
+    <link rel="stylesheet" href="css/styleMain.css">
+    <link rel="stylesheet" href="css/styleSetting.css">
+    <script defer src="js/scriptSetting.js"></script>
+    <script defer src="js/scriptMain.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="headerText" onclick="location.href='home.html'">MediaNote</h1>
+        <button class="helpButton" onclick="location.href='help.html'">？</button>
+
+        <div class="header-group">
+            <input type="radio" id="type-novel" name="type" value="novel" checked>
+            <label for="type-novel">小説</label>
+
+            <input type="radio" id="type-comic" name="type" value="comic">
+            <label for="type-comic">漫画</label>
+
+            <input type="radio" id="type-movie" name="type" value="movie">
+            <label for="type-movie">映画</label>
+
+            <input type="radio" id="type-anime" name="type" value="anime">
+            <label for="type-anime">アニメ</label>
+
+            <input type="radio" id="type-drama" name="type" value="drama">
+            <label for="type-drama">ドラマ</label>
+        </div>
+    </header>
+
+    <main>
+        <h2>ユーザー設定画面</h2>
+        <p>タグ設定 ※タイプ共通</p>
+        <form id="setForm" action="/save/setting" method="POST">
+
+            <!-- タグ設定 -->
+            <div id="tagInputsContainer">
+                <div class="tagInputWrapper">
+                    <!-- JSで追加 -->
+                </div>
+            </div>
+
+            <section>
+                <button type="button" id="addTagInputBtn">＋タグ追加</button>
+                <button type="submit">保存</button>
+            </section>
+        </form>
+
+    </main>
+    <footer>
+        <p><a href="home.html">ホームに戻る</a></p>
+    </footer>
+</body>
+
+</html>

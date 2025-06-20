@@ -1,0 +1,38 @@
+[
+  {
+    "id": "8423fcc0-1457-4f45-88ce-5b6b3c6f02ae",
+    "title": "マイホームヒーロー",
+    "series_title": "",
+    "author": "",
+    "company": "",
+    "release_year": "",
+    "watch_year": "",
+    "rating": "0",
+    "status": "未見",
+    "favorite": [],
+    "impression": "曲が好き",
+    "tobe": false,
+    "tags": [],
+    "user_id": "guest"
+  },
+  {
+    "id": "6e86182b-c7c8-4f43-baf5-fcdfc41a70f2",
+    "title": "となりのトトロ",
+    "series_title": "ジブリ",
+    "author": "",
+    "company": "",
+    "release_year": "",
+    "watch_year": "2010",
+    "rating": "60",
+    "status": "完走",
+    "favorite": [
+      "トトロ"
+    ],
+    "impression": "",
+    "tobe": false,
+    "tags": [
+      "夏っぽい"
+    ],
+    "user_id": "guest"
+  }
+]

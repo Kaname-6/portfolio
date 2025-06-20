@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MediaNote/Help</title>
+    <link rel="stylesheet" href="css/styleMain.css">
+    <script defer src="js/scriptMain.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="headerText" onclick="location.href='home.html'">MediaNote</h1>
+        <button class="helpButton" onclick="location.href='help.html'">？</button>
+
+        <div class="header-group">
+            <input type="radio" id="type-novel" name="type" value="novel" checked>
+            <label for="type-novel">小説</label>
+
+            <input type="radio" id="type-comic" name="type" value="comic">
+            <label for="type-comic">漫画</label>
+
+            <input type="radio" id="type-movie" name="type" value="movie">
+            <label for="type-movie">映画</label>
+
+            <input type="radio" id="type-anime" name="type" value="anime">
+            <label for="type-anime">アニメ</label>
+
+            <input type="radio" id="type-drama" name="type" value="drama">
+            <label for="type-drama">ドラマ</label>
+        </div>
+    </header>
+
+    <main>
+        <h2>ヘルプ</h2>
+        <p>記録を入力する： 好きなコンテンツを記録。上部のメディア選択タブで記録項目を選択。<br><br>
+            記録したものを閲覧・編集： 入力したコンテンツを一覧表示。編集も可。<br><br>
+            設定： タグの設定。タグは全項目共通。<br>
+        </p>
+    </main>
+    <footer>
+        <p><a href="home.html">ホームに戻る</a></p>
+    </footer>
+</body>
+
+</html>

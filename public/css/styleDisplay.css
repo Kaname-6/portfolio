@@ -1,0 +1,143 @@
+section {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav {
+    display: none;
+    border: 2px solid #999;     /* 枠線 */
+    padding: 16px;              /* 内側余白 */
+    border-radius: 8px;         /* 角丸 */
+    background-color: #f9f9f9;  /* 背景色 */
+    margin-top: 10px;           /* 上余白 */
+}
+
+#clear {
+  display: block;
+  margin: 5px auto;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2列に */
+    gap: 20px 40px;
+    /* 行・列の間隔 */
+    margin-bottom: 20px;
+}
+
+.flex-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    /* 高さ揃える */
+}
+
+.flex-row>section {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    position: relative;
+}
+
+#series_searchlabel,
+#searchlabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    /* 隙間なし */
+}
+
+#series_searchlabel input,
+#searchlabel input{
+    height: 19px;
+}
+
+table {
+    margin-top: 15px;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+th, td {
+  border: 1px solid lightgray;
+}
+
+th:nth-child(1) {
+  width: 45%;
+}
+
+th:nth-child(2) {
+  width: 10%;
+}
+
+th:nth-child(3) {
+  width: 10%;
+}
+
+th:nth-child(4) {
+  width: 15%;
+}
+
+th:nth-child(5) {
+  width: 20%;
+}
+
+/* ボタンを横並びにして幅いっぱいに広げる */
+#mediaTable td:last-child button {
+    width: 45%;
+}
+
+#mediaTable td:nth-child(2),
+#mediaTable td:nth-child(3),
+#mediaTable td:nth-child(4),
+#mediaTable td:nth-child(5) {
+  text-align: center;
+  vertical-align: middle; /* 縦方向も中央にしたいなら追加 */
+}
+
+/* モーダルの背景（全画面を覆い、中央揃え） */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+
+  display: flex;
+  justify-content: center; /* 横中央 */
+  align-items: center;     /* 縦中央 */
+
+  z-index: 1000;
+}
+
+/* モーダルの中身（カード部分） */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close:hover {
+  color: #000;
+}
+
