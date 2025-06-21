@@ -69,7 +69,6 @@ app.get('/get', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`サーバーが http://localhost:${PORT} で起動しました`);
 });
 
 app.delete('/delete/:type/:id', (req, res) => {

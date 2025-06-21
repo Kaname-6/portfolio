@@ -96,7 +96,7 @@ function reloadData(type) {
           <td>
           <button onclick="showDetail('${item.id}')">詳細</button>
           <button onclick="location.href='input.html?id=${item.id}&type=${type}'">編集</button>
-          <button onclick="deleteItem('ID_HERE')">削除</button>
+          <button onclick="deleteItem('${item.id}')">削除</button>
           </td>
         `;
 
@@ -166,8 +166,11 @@ function search() {
           <td>${item.rating}</td>
           <td>${item.watch_year || "不明"}</td>
           <td>${item.status || "不明"}</td>
-          <td><button onclick="showDetail('${item.id}')">詳細</button>
-              <button onclick="location.href='input.html?id=${item.id}&type=${type}'">編集</button></td>
+          <td>
+          <button onclick="showDetail('${item.id}')">詳細</button>
+          <button onclick="location.href='input.html?id=${item.id}&type=${type}'">編集</button>
+          <button onclick="deleteItem('${item.id}')">削除</button>  
+          </td>
         `;
         tbody.appendChild(tr);
       });
