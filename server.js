@@ -69,12 +69,13 @@ app.get('/get', (req, res) => {
 });
 
 app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 app.delete('/delete/:type/:id', (req, res) => {
   const type = req.params.type;
   const id = req.params.id;
-  const filePath = path.join(__dirname, `data/${type}.json`);
+  const filePath = path.join(__dirname, 'public', 'data', `${type}.json`);
 
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) return res.status(500).json({ error: '読み込み失敗' });

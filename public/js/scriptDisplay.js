@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+// 詳細
 function showDetail(id) {
   const data = allData.find(item => String(item.id) === String(id));
 
@@ -273,8 +273,9 @@ function showDetail(id) {
   };
 }
 
+// 消去
 function deleteItem(id) {
-  const type = document.querySelector('input[name="type"]:checked').value;
+  const type = document.querySelector('input[name="type"]:checked')?.value;
 
   if (!confirm('本当に削除しますか？')) return;
 
