@@ -87,7 +87,7 @@ th:nth-child(5) {
 
 /* ボタンを横並びにして幅いっぱいに広げる */
 #mediaTable td:last-child button {
-    width: 45%;
+    width: 30%;
 }
 
 #mediaTable td:nth-child(2),
