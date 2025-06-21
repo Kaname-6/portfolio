@@ -86,7 +86,7 @@ app.delete('/delete/:type/:id', (req, res) => {
       return res.status(500).json({ error: 'JSONパース失敗' });
     }
 
-    const newItems = items.filter(item => String(item.id) !== id);
+    const newItems = items.filter(item => String(item.id) !== String(data.id));
 
     fs.writeFile(filePath, JSON.stringify(newItems, null, 2), (err) => {
       if (err) return res.status(500).json({ error: '書き込み失敗' });
