@@ -93,8 +93,11 @@ function reloadData(type) {
           <td>${item.rating}</td>
           <td>${item.watch_year || "-"}</td>
           <td>${item.status || "-"}</td>
-          <td><button onclick="showDetail('${item.id}')">詳細</button>
-          <button onclick="location.href='input.html?id=${item.id}&type=${type}'">編集</button></td>
+          <td>
+          <button onclick="showDetail('${item.id}')">詳細</button>
+          <button onclick="location.href='input.html?id=${item.id}&type=${type}'">編集</button>
+          <button onclick="deleteItem('ID_HERE')">削除</button>
+          </td>
         `;
 
         tbody.appendChild(tr);
@@ -267,3 +270,19 @@ function showDetail(id) {
   };
 }
 
+function deleteItem(id) {
+  const type = document.querySelector('input[name="type"]:checked').value;
+
+  if (!confirm('本当に削除しますか？')) return;
+
+  fetch(`/delete/${type}/${id}`, { method: 'DELETE' })
+    .then(res => {
+      if (!res.ok) throw new Error('削除失敗');
+      alert('削除しました');
+      reloadData(type);
+    })
+    .catch(err => {
+      console.error(err);
+      alert('削除に失敗しました');
+    });
+}

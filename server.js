@@ -71,3 +71,27 @@ app.get('/get', (req, res) => {
 app.listen(PORT, () => {
   console.log(`サーバーが http://localhost:${PORT} で起動しました`);
 });
+
+app.delete('/delete/:type/:id', (req, res) => {
+  const type = req.params.type;
+  const id = req.params.id;
+  const filePath = path.join(__dirname, `data/${type}.json`);
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) return res.status(500).json({ error: '読み込み失敗' });
+
+    let items = [];
+    try {
+      items = JSON.parse(data);
+    } catch (e) {
+      return res.status(500).json({ error: 'JSONパース失敗' });
+    }
+
+    const newItems = items.filter(item => String(item.id) !== id);
+
+    fs.writeFile(filePath, JSON.stringify(newItems, null, 2), (err) => {
+      if (err) return res.status(500).json({ error: '書き込み失敗' });
+      res.json({ message: '削除成功' });
+    });
+  });
+});
