@@ -9,6 +9,10 @@ app.use(express.json()); // JSONを扱う
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // データを受け取る
 app.post('/save/:type', (req, res) => {
   const type = req.params.type;
